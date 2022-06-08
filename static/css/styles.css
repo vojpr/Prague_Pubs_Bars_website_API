@@ -1,0 +1,46 @@
+/* This CSS file will need to be added to the styling of 
+your web pages for the styles to be rendered. */
+
+body {
+background-color: #044404;
+color: white;
+}
+
+a {
+    color: #ffc107;
+}
+
+a:hover {
+    color: #ffc107;
+}
+
+.col-sm-12 {
+    margin-top: 50px;
+}
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  color: white;
+  background-color: #044404;
+}
+
+.space-above {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.btn-warning {
+    color: #044404;
+    margin-right: 20px;
+}
+
+.footer {
+    font-size: 125%;
+    width:100%;
+    text-align: center;
+    position: fixed;
+    bottom: 50px;
+}

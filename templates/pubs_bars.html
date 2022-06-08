@@ -1,0 +1,58 @@
+{% extends 'bootstrap/base.html' %}
+{% block styles %}
+{{super()}}
+    <link rel="icon" type="image/x-icon" href="static/img/favicon.png">
+    <link rel="stylesheet" href="{{ url_for('.static', filename='css/styles.css') }}">
+{% endblock %}
+
+{% block title %}Prague Pubs & Bars{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h1>All Pubs & Bars</h1>
+
+	  <table class="table">
+        <thead>
+           <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Location</th>
+              <th scope="col">Open Time</th>
+              <th scope="col">Close Time</th>
+              <th scope="col">Beer Rating</th>
+              <th scope="col">Outside Tables</th>
+              <th scope="col">Foosball</th>
+              <th scope="col">Overall Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+          {% for each in places %}
+            <tr>
+              <td>{{each.name}}</td>
+              <td><a href="{{ each.url }}" target="_blank">Maps Link</a></td>
+              <td>{{ each.open_time }}</td>
+              <td>{{ each.close_time }}</td>
+              <td>{{ each.beer_rating }}</td>
+              <td>{{ each.outside_tables }}</td>
+              <td>{{ each.foosball }}</td>
+              <td>{{ each.overall_rating }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+  	  </table>
+
+      <p>
+          <a class="btn btn-warning" href="{{ url_for('add_place') }}">Addd a new place</a>
+          <a class="btn btn-warning" href="{{ url_for('home') }}">Return to home page</a>
+      </p>
+
+    </div>
+  </div>
+</div>
+
+<footer class="footer"><a href="https://documenter.getpostman.com/view/20820622/Uz5Knavg" target=”_blank”>API Documentation</a></footer>
+
+{% endblock %}
