@@ -24,6 +24,7 @@ db = SQLAlchemy(app)
 
 
 class PubsBars(db.Model):
+    __tablename__ = "pubs_bars"
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(250), unique=True, nullable=False)
     url = db.Column(db.String(250), nullable=False)
@@ -40,7 +41,7 @@ class PubsBars(db.Model):
             dictionary[column.name] = getattr(self, column.name)
         return dictionary
 
-# db.create_all()
+db.create_all()
 
 
 class AddForm(FlaskForm):
