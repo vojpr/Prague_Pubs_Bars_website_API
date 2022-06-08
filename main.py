@@ -41,7 +41,7 @@ class PubsBars(db.Model):
             dictionary[column.name] = getattr(self, column.name)
         return dictionary
 
-db.create_all()
+#db.create_all()
 
 
 class AddForm(FlaskForm):
