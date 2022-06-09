@@ -126,7 +126,7 @@ def search():
         return jsonify(places=results)
     else:
         return jsonify(error={"Not Found": "Sorry, we don't have a Pub or a Bar that matches all your criteria in our "
-                                           "database."}), 404
+                                           "database."})
 
 
 # Update beer rating and/or overall rating
@@ -141,11 +141,11 @@ def update(place_id):
             if request.args.get("new-overall-rating"):
                 place.overall_rating = request.args.get("new-overall-rating")
             db.session.commit()
-            return jsonify(response={"Success": "Successfully updated Pub or Bar info."}), 200
+            return jsonify(response={"Success": "Successfully updated Pub or Bar info."})
         else:
-            return jsonify(error={"Not Found": "Sorry, no Pub or Bar with that id found in the database."}), 404
+            return jsonify(error={"Not Found": "Sorry, no Pub or Bar with that id found in the database."})
     else:
-        return jsonify(error={"Forbidden": "Sorry, that's not allowed. Make sure you have the correct API key."}), 403
+        return jsonify(error={"Forbidden": "Sorry, that's not allowed. Make sure you have the correct API key."})
 
 
 # Delete a place from database
@@ -157,11 +157,11 @@ def delete(place_id):
         if place:
             db.session.delete(place)
             db.session.commit()
-            return jsonify(response={"Success": "Successfully deleted the Pub or Bar from the database."}), 200
+            return jsonify(response={"Success": "Successfully deleted the Pub or Bar from the database."})
         else:
-            return jsonify(error={"Not Found": "Sorry, no Pub or Bar with that id found in the database."}), 404
+            return jsonify(error={"Not Found": "Sorry, no Pub or Bar with that id found in the database."})
     else:
-        return jsonify(error={"Forbidden": "Sorry, that's not allowed. Make sure you have the correct API key."}), 403
+        return jsonify(error={"Forbidden": "Sorry, that's not allowed. Make sure you have the correct API key."})
 
 
 if __name__ == '__main__':
