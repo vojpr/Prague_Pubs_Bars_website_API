@@ -1,4 +1,4 @@
-# Prague_Pubs_Bars_website_API
+# Prague Pubs&Bars website with API ednpints
 Website with a list of Pubs and Bars in Prague with created API endpoints and documentation
 
 Website: https://prague-pubs-bars.herokuapp.com/ <br>
