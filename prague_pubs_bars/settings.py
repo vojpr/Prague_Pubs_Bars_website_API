@@ -90,16 +90,16 @@ WSGI_APPLICATION = 'prague_pubs_bars.wsgi.application'
 #     }
 # }
  
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DATABASE_NAME'),
-        'USER': os.environ.get('DATABASE_USER'),
-        'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
-        'HOST': 'ec2-44-209-24-62.compute-1.amazonaws.com',
-        'PORT': '5432',
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': os.environ.get('DATABASE_NAME'),
+#        'USER': os.environ.get('DATABASE_USER'),
+#        'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
+#        'HOST': 'ec2-44-209-24-62.compute-1.amazonaws.com',
+#        'PORT': '5432',
+#    }
+#}
 
 
 # Password validation
