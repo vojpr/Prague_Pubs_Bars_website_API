@@ -8,7 +8,6 @@
         <div class="col-sm-12">
 
             <h1>All Pubs & Bars</h1>
-            <h1>{{ place.map_url }}</h1>
 
             <div class="table-responsive">
                 <table class="table">
@@ -30,7 +29,7 @@
                             <tr>
                                 <td>{{pub.id}}</td>
                                 <td>{{pub.name}}</td>
-                                <td><a href="{{ place.map_url }}" target="_blank">Maps Link</a></td>
+                                <td><a href="{{ pub.map_url }}" target="_blank">Maps Link</a></td>
                                 <td>{{ pub.open_time }}</td>
                                 <td>{{ pub.close_time }}</td>
                                 <td>
