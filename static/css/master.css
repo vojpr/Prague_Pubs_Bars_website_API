@@ -1,0 +1,59 @@
+body {
+    background-color: #044404;
+    color: white;
+}
+
+hr {
+    opacity: 1;
+}
+
+.container {
+    margin-bottom: 69px;
+}
+
+.table {
+    color: unset;
+}
+
+a {
+    color: #ffc107;
+}
+
+a:hover, a:focus {
+    color: #ffc107;
+}
+
+.col-sm-12 {
+    margin-top: 50px;
+}
+
+.jumbotron {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    color: white;
+    background-color: #044404;
+}
+
+.space-above {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.btn-warning {
+    color: #044404;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    font-size: 130%;
+    width:100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    background-color: #044404;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}

@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %} 
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+
+            <h1>All Pubs & Bars</h1>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Open Time</th>
+                            <th scope="col">Close Time</th>
+                            <th scope="col">Beer Rating</th>
+                            <th scope="col">Outside Tables</th>
+                            <th scope="col">Foosball</th>
+                            <th scope="col">Overall Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for pub in pubs_list %}
+                            <tr>
+                                <td>{{pub.id}}</td>
+                                <td>{{pub.name}}</td>
+                                <td><a href="{{ place.map_url }}" target="_blank">Maps Link</a></td>
+                                <td>{{ pub.open_time }}</td>
+                                <td>{{ pub.close_time }}</td>
+                                <td>
+                                    {% if pub.beer_rating == None %}
+                                        -
+                                    {% else %}
+                                        {% for rating_point in pub.show_beer_rating %}
+                                            🍺
+                                        {% endfor %}
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if pub.outside_tables == None %}
+                                        -
+                                    {% elif pub.outside_tables == True %}
+                                        ✅
+                                    {% else %}
+                                        ❌
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if pub.foosball == None %}
+                                        -
+                                    {% elif pub.foosball == True %}
+                                        ✅
+                                    {% else %}
+                                        ❌
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if pub.overall_rating == None %}
+                                        -
+                                    {% else %}
+                                        {% for rating_point in pub.show_overall_rating %}
+                                            ⭐️
+                                        {% endfor %}
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer"><a href="https://documenter.getpostman.com/view/20820622/Uz5Knavg" target=”_blank”>API Documentation</a></footer>
+
+{% endblock content %}
