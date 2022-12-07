@@ -87,17 +87,17 @@ WSGI_APPLICATION = 'prague_pubs_bars.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-# 
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': config("DATABASE_NAME"),
-#        'USER': config("DATABASE_USER"),
-#        'PASSWORD': config("DATABASE_PASSWORD"),
-#        'HOST': 'ec2-44-209-24-62.compute-1.amazonaws.com',
-#        'PORT': '5432',
-#    }
-# }
+ 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config("DATABASE_NAME"),
+        'USER': config("DATABASE_USER"),
+        'PASSWORD': config("DATABASE_PASSWORD"),
+        'HOST': 'ec2-44-209-24-62.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
+}
 
 
 # Password validation
