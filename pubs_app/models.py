@@ -12,6 +12,9 @@ class PubsBars(models.Model):
     foosball = models.BooleanField(null=True, blank=True)
     overall_rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)], null=True, blank=True)
 
+    class Meta:
+       ordering = ["id"]
+    
     def __str__(self):
         return self.name
 
