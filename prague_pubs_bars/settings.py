@@ -31,6 +31,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'prague-pubs-bars.herokuapp.com']
 
+CSRF_TRUSTED_ORIGINS = ["https://*.fly.dev"]
+
 
 # Application definition
 
