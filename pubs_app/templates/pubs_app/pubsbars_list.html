@@ -41,24 +41,8 @@
                                         {% endfor %}
                                     {% endif %}
                                 </td>
-                                <td>
-                                    {% if pub.outside_tables == None %}
-                                        -
-                                    {% elif pub.outside_tables == True %}
-                                        ✅
-                                    {% else %}
-                                        ❌
-                                    {% endif %}
-                                </td>
-                                <td>
-                                    {% if pub.foosball == None %}
-                                        -
-                                    {% elif pub.foosball == True %}
-                                        ✅
-                                    {% else %}
-                                        ❌
-                                    {% endif %}
-                                </td>
+                                <td>{{ pub.outside_tables|yesno:"✅,❌,-" }}</td>
+                                <td>{{ pub.foosball|yesno:"✅,❌,-" }}</td>
                                 <td>
                                     {% if pub.overall_rating == None %}
                                         -

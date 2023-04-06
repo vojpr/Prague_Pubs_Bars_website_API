@@ -48,12 +48,16 @@ a:hover, a:focus {
 }
 
 .footer {
-    font-size: 130%;
+    font-size: 150%;
     width:100%;
     text-align: center;
     position: fixed;
     bottom: 0;
-    background-color: #044404;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    background-color: #c4a309;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.footer a {
+    color: #044404;
 }
