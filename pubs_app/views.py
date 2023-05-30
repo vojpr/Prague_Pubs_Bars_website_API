@@ -1,10 +1,14 @@
+from django.views.generic import TemplateView, ListView
 from .models import PubsBars
-from django.views.generic import ListView
 from .serializers import PubsBarsSerializer
 from rest_framework import generics, mixins
 from django.http import Http404
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
+
+
+class IndexPageView(TemplateView):
+    template_name = "index.html"
 
 
 class PubsListView(ListView):
