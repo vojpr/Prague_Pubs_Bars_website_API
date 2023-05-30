@@ -39,7 +39,7 @@
                                     {% if pub.beer_rating == None %}
                                         -
                                     {% else %}
-                                        {% for rating_point in pub.beer_rating|make_range %}
+                                        {% for rating_point in pub.beer_rating|create_range %}
                                             🍺
                                         {% endfor %}
                                     {% endif %}
@@ -50,7 +50,7 @@
                                     {% if pub.overall_rating == None %}
                                         -
                                     {% else %}
-                                        {% for rating_point in pub.overall_rating|make_range %}
+                                        {% for rating_point in pub.overall_rating|create_range %}
                                             ⭐️
                                         {% endfor %}
                                     {% endif %}
