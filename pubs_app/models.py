@@ -8,8 +8,8 @@ class PubsBars(models.Model):
     open_time = models.TimeField(auto_now=False, auto_now_add=False)
     close_time = models.TimeField(auto_now=False, auto_now_add=False)
     beer_rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)], null=True, blank=True)
-    outside_tables = models.BooleanField(null=True, blank=True)
-    foosball = models.BooleanField(null=True, blank=True)
+    outside_tables = models.BooleanField(null=True)
+    foosball = models.BooleanField(null=True)
     overall_rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)], null=True, blank=True)
 
     class Meta:
