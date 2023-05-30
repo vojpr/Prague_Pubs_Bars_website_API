@@ -14,6 +14,7 @@ class IndexPageView(TemplateView):
 class PubsListView(ListView):
     model = PubsBars
     context_object_name = "pubs_list"
+    paginate_by = 10
 
 
 # API views

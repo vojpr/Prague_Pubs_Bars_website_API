@@ -47,6 +47,16 @@ a:hover, a:focus {
     margin-bottom: 20px;
 }
 
+.pagination {
+    --bs-pagination-color: #044403;
+    --bs-pagination-hover-color: #258523;
+    --bs-pagination-focus-color: #258523;
+}
+
+.no-hover{
+    pointer-events: none;
+}
+
 .footer {
     font-size: 150%;
     width:100%;
