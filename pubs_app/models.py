@@ -17,15 +17,3 @@ class PubsBars(models.Model):
     
     def __str__(self):
         return self.name
-
-    def show_beer_rating(self):
-        rating = []
-        for each in range(self.beer_rating):
-            rating.append("x")
-        return rating
-
-    def show_overall_rating(self):
-        rating = []
-        for each in range(self.overall_rating):
-            rating.append("x")
-        return rating

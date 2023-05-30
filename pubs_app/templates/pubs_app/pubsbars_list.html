@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
+
 {% load static %}
+
+{% load custom_template_tags %}
 
 {% block content %} 
 
@@ -36,7 +39,7 @@
                                     {% if pub.beer_rating == None %}
                                         -
                                     {% else %}
-                                        {% for rating_point in pub.show_beer_rating %}
+                                        {% for rating_point in pub.beer_rating|make_range %}
                                             🍺
                                         {% endfor %}
                                     {% endif %}
@@ -47,7 +50,7 @@
                                     {% if pub.overall_rating == None %}
                                         -
                                     {% else %}
-                                        {% for rating_point in pub.show_overall_rating %}
+                                        {% for rating_point in pub.overall_rating|make_range %}
                                             ⭐️
                                         {% endfor %}
                                     {% endif %}
