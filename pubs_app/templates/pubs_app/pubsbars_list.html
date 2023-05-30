@@ -16,7 +16,6 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
                             <th scope="col">Name</th>
                             <th scope="col">Location</th>
                             <th scope="col">Open Time</th>
@@ -30,7 +29,6 @@
                     <tbody>
                         {% for pub in pubs_list %}
                             <tr>
-                                <td>{{pub.id}}</td>
                                 <td>{{pub.name}}</td>
                                 <td><a href="{{ pub.map_url }}" target="_blank">Maps Link</a></td>
                                 <td>{{ pub.open_time }}</td>
