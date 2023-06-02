@@ -2,16 +2,38 @@
 
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 {% load custom_template_tags %}
 
 {% block content %} 
 
+<!-- Navbar -->
+<nav class="navbar container mt-4 mb-4">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0"><h1>Pubs & Bars</h1></span>
+    <div class="btn-group">
+        <button type="button" class="btn dropdown-toggle btn-custom-yellow" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" data-bs-auto-close="outside">
+            <i class="fa fa-filter fa-lg"></i>
+            Filters
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+            <!-- Filtering -->
+            <form method="get" class="filter-form">
+                <div style="display: grid"> 
+                    {{filter.form|crispy}}
+                </div>
+                <button type="submit" class="btn btn-dark mt-3 me-2">Filter</button>
+                <a class="btn btn-secondary mt-3" href="{% url 'pubs_list' %}">Clear filters</a>
+            </form>
+        </ul>
+      </div>
+  </div>
+</nav>
+<!-- List -->
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-
-            <h1>All Pubs & Bars</h1>
-
             <div class="table-responsive">
                 <table class="table">
                     <thead>
@@ -61,7 +83,7 @@
         </div>
     </div>
 </div>
-
+<!-- Pagination -->
 <div class="pagination container justify-content-center mt-4">
     <ul class="pagination">
         {% if page_obj.has_previous %}

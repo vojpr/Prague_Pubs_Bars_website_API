@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'pubs_app.apps.PubsAppConfig',
     'rest_framework',
     'django_filters',
+    'crispy_forms',
+    'crispy_bootstrap4',
     'rest_framework.authtoken',
     'whitenoise.runserver_nostatic',
 ]
@@ -152,3 +154,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
