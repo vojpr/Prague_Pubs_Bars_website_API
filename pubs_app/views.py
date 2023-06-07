@@ -18,7 +18,7 @@ class PubsListView(FilterView):
     model = PubsBars
     context_object_name = "pubs_list"
     paginate_by = 10
-    filterset_class  = PubsBarsFilter
+    filterset_class = PubsBarsFilter
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
