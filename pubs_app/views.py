@@ -1,4 +1,4 @@
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView
 from django_filters.views import FilterView
 from .filters import PubsBarsFilter
 from .models import PubsBars
