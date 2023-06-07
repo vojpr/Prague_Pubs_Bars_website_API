@@ -7,7 +7,7 @@ from django.forms import CheckboxInput, CheckboxSelectMultiple
 class CustomOrderingFilter(OrderingFilter):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.label = "Sort by"
+        self.label = "Sort by:"
         self.extra['choices'] += [
             ('name', 'Name (A-Z)'),
             ('-name', 'Name (Z-A)'),
@@ -19,12 +19,12 @@ class CustomOrderingFilter(OrderingFilter):
     
 
 class PubsBarsFilter(FilterSet):
-    name = CharFilter(lookup_expr='icontains')
+    name = CharFilter(lookup_expr='icontains', label="Name contains:")
     outside_tables = BooleanFilter(widget=CheckboxInput, method="filter_true_method")
     foosball = BooleanFilter(widget=CheckboxInput, method="filter_true_method")
-    beer_rating = RangeFilter(label="Beer rating (min-max)", widget=RangeWidget(attrs={'type':'number', 'min': '1', 'max': '5'}))
-    overall_rating = RangeFilter(label="Overall rating (min-max)", widget=RangeWidget(attrs={'type':'number', 'min': '1', 'max': '5'}))
-    order_by = CustomOrderingFilter()
+    beer_rating = RangeFilter(label="Beer rating (min-max):", widget=RangeWidget(attrs={'type':'number', 'min': '1', 'max': '5', 'class': 'textinput form-control filter-num-input'}))
+    overall_rating = RangeFilter(label="Overall rating (min-max):", widget=RangeWidget(attrs={'type':'number', 'min': '1', 'max': '5', 'class': 'textinput form-control filter-num-input'}))
+    order_by = CustomOrderingFilter(label="Sort by:")
 
     def filter_true_method(self, queryset, name, value):
         if value:

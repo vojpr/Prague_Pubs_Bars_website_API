@@ -54,6 +54,16 @@ hr {
     margin-inline: 15px;
 }
 
+.filter-form .form-group {
+    padding-bottom: 10px;
+}
+
+.filter-num-input {
+    margin: 0 !important;
+    width: unset !important;
+    display: unset !important;
+}
+
 .table {
     color: unset;
 }
