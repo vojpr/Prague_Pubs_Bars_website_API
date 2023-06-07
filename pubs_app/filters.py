@@ -1,7 +1,7 @@
-from django_filters import FilterSet, ChoiceFilter, RangeFilter, CharFilter, ModelMultipleChoiceFilter, OrderingFilter, BooleanFilter
+from django_filters import FilterSet, RangeFilter, CharFilter, OrderingFilter, BooleanFilter
 from django_filters.widgets import RangeWidget
 from .models import PubsBars
-from django.forms import CheckboxInput, CheckboxSelectMultiple
+from django.forms import CheckboxInput
 
 
 class CustomOrderingFilter(OrderingFilter):
