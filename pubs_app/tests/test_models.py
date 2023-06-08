@@ -18,7 +18,7 @@ class PubsBarsModelTest(TestCase):
             )
 
     def test_object_creation(self):
-        pub = PubsBars.objects.get(id=1)
+        pub = PubsBars.objects.first()
         self.assertEqual(pub.name, "Pub 1")
         self.assertEqual(pub.map_url, "https://goo.gl/maps/qY984V1Zaio8p3me9")
         self.assertEqual(pub.open_time, datetime.time(1, 0))
